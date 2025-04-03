@@ -1,3 +1,5 @@
+Automate Infra using Terraform on GCP
+
 1. Network Infrastructure Setup
 Create a VPC with custom CIDR blocks.
 
