@@ -1,0 +1,54 @@
+AWS Infrastructure Deployment Tasks
+
+1. Network Infrastructure Setup
+Create a VPC with custom CIDR blocks.
+
+Create public and private subnets across multiple availability zones.
+
+Set up an Internet Gateway and route tables for internet access.
+
+Configure a NAT Gateway for private subnet access to the internet.
+
+Implement Security Groups for EC2 instance access control.
+
+Set up Network ACLs for subnet-level traffic control.
+
+2. EC2 Instance Setup & Sample Application Deployment
+Launch EC2 instances (using Amazon Linux or Ubuntu).
+
+Install a sample application on the EC2 instance (e.g., a Node.js app or a simple web server).
+
+Configure user data scripts to automate app installation on EC2.
+
+Ensure security group allows necessary traffic (HTTP, SSH).
+
+3. Load Balancer Setup
+Deploy an Application Load Balancer (ALB) to distribute traffic across EC2 instances.
+
+Set up target groups to register EC2 instances with the load balancer.
+
+Configure listeners for the ALB to handle incoming HTTP traffic.
+
+4. Auto Scaling Configuration
+Create an Auto Scaling Group (ASG) for EC2 instances to handle traffic scaling.
+
+Define launch configurations for EC2 instances in the auto scaling group.
+
+Set desired, minimum, and maximum instance counts for auto scaling.
+
+Attach the ASG instances to the load balancer target group.
+
+5. Monitoring & Alerts
+Set up CloudWatch monitoring to track EC2 and load balancer health.
+
+Configure CloudWatch alarms for high CPU usage (e.g., trigger when CPU usage > 80%).
+
+Set up SNS notifications to send alerts (via email/SMS) when alarms are triggered.
+
+Enable basic CloudWatch monitoring for EC2 instances.
+
+6. Backup Strategy Implementation
+Implement EBS snapshots for backup of EC2 volumes.
+
+Automate AMI backups for EC2 instance state.
+
