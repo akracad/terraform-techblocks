@@ -1,0 +1,51 @@
+1. Network Infrastructure Setup
+Create a VPC with custom CIDR blocks.
+
+Create public and private subnets in different regions.
+
+Set up firewall rules for controlling ingress and egress traffic.
+
+Configure Cloud NAT Gateway for private subnet internet access.
+
+Set up VPC Peering (if needed for communication with other VPCs).
+
+2. Compute Engine Setup & Sample Application Deployment
+Launch VM instances using a suitable image (e.g., Debian or Ubuntu).
+
+Install a sample application (e.g., Apache, Node.js, or NGINX) on the VMs.
+
+Use startup scripts for automatic application deployment when the VM starts.
+
+Configure firewall rules to allow HTTP/HTTPS and SSH access.
+
+3. Load Balancer Setup
+Set up a Global HTTP(S) Load Balancer to distribute traffic across VMs.
+
+Create backend services and associate them with the load balancer.
+
+Set up URL maps to route traffic based on request patterns.
+
+Configure health checks for VMs to ensure traffic is routed only to healthy instances.
+
+4. Auto Scaling Configuration
+Set up an Instance Group with an autoscaler to automatically scale the number of VMs based on CPU utilization or other metrics.
+
+Configure the autoscaling policy (e.g., scale out when CPU > 70% for 5 minutes).
+
+Ensure that new instances are registered with the load balancer.
+
+5. Monitoring & Alerts
+Set up Google Cloud Monitoring to track VM health, load balancer metrics, and instance performance.
+
+Create alerting policies in Cloud Monitoring for high CPU or low VM health.
+
+Set up email/SMS notifications via Cloud Pub/Sub and Cloud Functions for alerting.
+
+Configure Stackdriver logging to capture logs for troubleshooting.
+
+6. Backup Strategy Implementation
+Configure snapshot schedules for VM persistent disks.
+
+Set up Cloud Storage for backup of application data or logs.
+
+Implement disk encryption and ensure backups are securely stored.
